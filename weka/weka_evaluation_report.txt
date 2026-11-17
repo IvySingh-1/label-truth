@@ -1,0 +1,61 @@
+=== Run information ===
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     LabelTruth_J48_Claims_Verification
+Instances:    140
+Attributes:   9 (energy_kcal, sugars_g, fat_g, saturated_fat_g, protein_g, fiber_g, sodium_mg, hidden_sugar_count, verdict)
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+J48 Pruned Tree
+------------------
+    |--- fiber_g <= 0.05
+    |   |--- protein_g <= 4.05
+    |   |   |--- sugars_g <= 15.10
+    |   |   |   |--- class: HONEST
+    |   |   |--- sugars_g >  15.10
+    |   |   |   |--- class: MISLEADING
+    |   |--- protein_g >  4.05
+    |   |   |--- class: HONEST
+    |--- fiber_g >  0.05
+    |   |--- fiber_g <= 6.45
+    |   |   |--- sodium_mg <= 56.00
+    |   |   |   |--- sodium_mg <= 45.00
+    |   |   |   |   |--- class: MISLEADING
+    |   |   |   |--- sodium_mg >  45.00
+    |   |   |   |   |--- class: HONEST
+    |   |   |--- sodium_mg >  56.00
+    |   |   |   |--- class: MISLEADING
+    |   |--- fiber_g >  6.45
+    |   |   |--- sugars_g <= 15.85
+    |   |   |   |--- fiber_g <= 11.45
+    |   |   |   |   |--- sugars_g <= 6.00
+    |   |   |   |   |   |--- class: HONEST
+    |   |   |   |   |--- sugars_g >  6.00
+    |   |   |   |   |   |--- class: HONEST
+    |   |   |   |--- fiber_g >  11.45
+    |   |   |   |   |--- class: MISLEADING
+    |   |   |--- sugars_g >  15.85
+    |   |   |   |--- class: MISLEADING
+
+Number of Leaves  : 	10
+Size of the tree : 	19
+
+=== Stratified cross-validation ===
+=== Summary ===
+Correctly Classified Instances          126                90.00 %
+Incorrectly Classified Instances         14                10.00 %
+Kappa statistic                          0.5313
+Mean absolute error                      0.1000
+Root mean squared error                  0.3162
+Total Number of Instances               140
+
+=== Detailed Accuracy By Class ===
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  Class
+                   0.588    0.057      0.588    0.588      0.588  HONEST
+                   0.943    0.412      0.943    0.943      0.943  MISLEADING
+Weighted Avg.      0.900    0.045      0.766    0.766      0.766
+
+=== Confusion Matrix ===
+   (a)   (b)   <-- classified as
+    10     7 |   (a) = HONEST
+     7   116 |   (b) = MISLEADING
