@@ -1,0 +1,31 @@
+{
+    "dataset_title": "Open Food Facts India Packaged Food Data (LabelTruth Corpus)",
+    "total_records": 140,
+    "attributes": {
+        "product_id": "Unique barcode or EAN identifier for the product",
+        "product_name": "Full trade and variant name of the packaged food",
+        "brand": "Manufacturer or brand name in Indian retail",
+        "category": "Broad food domain (Snacks & Bakery, Breakfast Cereals, Beverages, Dairy, Health Drinks, Staples & Bakery)",
+        "sub_category": "Secondary food grouping (e.g., Biscuits & Cookies, Fruit Juices)",
+        "product_type": "Specific product category used in Snowflake dimension hierarchy",
+        "front_claims": "Claims printed visibly on the front of package (e.g., High Fibre, No Added Sugar, Baked Not Fried)",
+        "ingredients_text": "Complete ingredients list including disguised sugars, flours, oils, and additives",
+        "energy_kcal": "Energy in kilocalories per 100g",
+        "carbohydrates_g": "Total carbohydrates in grams per 100g",
+        "sugars_g": "Total sugars in grams per 100g",
+        "added_sugars_g": "Added refined/disguised sugars in grams per 100g",
+        "fat_g": "Total fat in grams per 100g",
+        "saturated_fat_g": "Saturated fatty acids in grams per 100g",
+        "trans_fat_g": "Trans fatty acids in grams per 100g",
+        "protein_g": "Protein in grams per 100g",
+        "fiber_g": "Dietary fibre in grams per 100g",
+        "sodium_mg": "Sodium content in milligrams per 100g",
+        "salt_g": "Calculated salt content in grams per 100g (Sodium * 2.5 / 1000)",
+        "serving_size_g": "Typical consumer serving portion in grams or milliliters",
+        "nutriscore_grade": "Nutri-Score rating letter (A to E)",
+        "nutriscore_score": "Nutri-Score calculated numerical index (-15 to 40)",
+        "nova_group": "NOVA ultra-processing classification (1 to 4)",
+        "trust_score": "Community validation trust score (0.0 to 1.0)",
+        "countries": "Target market country (India)"
+    }
+}
